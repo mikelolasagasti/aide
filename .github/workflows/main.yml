@@ -12,6 +12,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+    - name: Install xmllint
+      run: sudo apt install bison
     - name: autoconf
       run: sh autogen.sh
       shell: sh
