@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: Ubuntu CI
 
 on: [push]
 
@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install deps
-      run: sudo apt install bison flex libgpg-error-dev libmhash-dev
+      run: sudo apt install bison flex libgpg-error-dev libmhash-dev libpq-dev libcap-dev
     - name: autoconf
       run: sh autogen.sh
       shell: sh
