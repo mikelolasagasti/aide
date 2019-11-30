@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install deps
-      run: sudo apt install bison flex libgpg-error-dev libmhash-dev libpq-dev libcap-dev libaudit-dev libselinux1-dev libattr1-dev e2fslibs-dev libacl1-dev
+      run: sudo apt install bison flex libgpg-error-dev libmhash-dev libpq-dev libcap-dev libaudit-dev libselinux1-dev libattr1-dev e2fslibs-dev libacl1-dev postgresql-server-dev-all
     - name: autoconf
       run: sh autogen.sh
     - name: configure
