@@ -13,11 +13,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install deps
-      run: sudo apt install bison flex e2fslibs-dev libacl1-dev libattr1-dev libaudit-dev libcap-dev libgpg-error-dev libmhash-dev libselinux1-dev
+      run: sudo apt install bison flex libmhash-dev libpcre3-dev zlib1g-dev
     - name: autoconf
       run: sh autogen.sh
     - name: configure
-      run: ./configure --disable-static --with-audit --with-capabilities --with-e2fsattrs --with-posix-acl --with-selinux --with-xattr --with-zlib
+      run: ./configure --disable-static --with-zlib
     - name: make
       run: make
     - name: make check
