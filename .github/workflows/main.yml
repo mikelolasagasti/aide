@@ -17,7 +17,7 @@ jobs:
     - name: autoconf
       run: sh autogen.sh
     - name: configure
-      run: ./configure --with-zlib --with-selinux --with-posix-acl --with-capabilities --with-e2fsattrs --with-xattr
+      run: ./configure --with-zlib --with-selinux --with-posix-acl --with-capabilities --with-e2fsattrs --with-xattr --with-audit
     - name: make
       run: make
     - name: make check
